@@ -1,0 +1,36 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-slides pager="false" autoplay="2000" loop="true" speed="1500" effect="fade">
+    <ion-slide class="slide-background swiper-no-swiping" *ngFor="let item of backgrounds"
+      [ngStyle]="{'background-image': 'url('+ item +')'}">
+    </ion-slide>    
+  </ion-slides>
+
+  <div class="login-container">
+    <form padding [formGroup]="signupForm" (submit)="signup()" novalide>
+      <ion-item>
+        <ion-input type="text" formControlName="firstName" placeholder="Nome" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" formControlName="lastName" placeholder="Sobrenome" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" formControlName="email" placeholder="Email" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" formControlName="password" placeholder="Senha" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" formControlName="passwordConfirmation" placeholder="Confirmação de Senha" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <button ion-button block outline color="light" [disabled]="!signupForm.valid" class="login-button"> Criar Conta </button>
+    </form>
+  </div>
+ 
+  
+</ion-content>
