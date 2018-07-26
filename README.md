@@ -9,21 +9,3 @@
 ![View this](src/assets/prints/2.png)
 
 ![View this](src/assets/prints/3.png)
-
-![View this](src/assets/prints/4.png)
-
-![View this](src/assets/prints/5.png)
-
-![View this](src/assets/prints/6.png)
-
-![View this](src/assets/prints/7.png)
-
-![View this](src/assets/prints/8.png)
-
-![View this](src/assets/prints/9.png)
-
-![View this](src/assets/prints/10.png)
-
-![View this](src/assets/prints/11.png)
-
-![View this](src/assets/prints/12.png)
