@@ -3,7 +3,7 @@
     <name>GuiaCidades</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.111.220:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -86,5 +86,6 @@
         <variable name="APP_NAME" value="GuiaCidades" />
     </plugin>
     <allow-navigation href="http://192.168.111.220:8100" />
+    <allow-navigation href="http://192.168.88.149:8100" />
     <engine name="android" spec="7.0.0" />
 </widget>

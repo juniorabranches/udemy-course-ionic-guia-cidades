@@ -19,7 +19,8 @@ export class LoginPage {
   ]
 
   public loginForm: any;
-  constructor(public auth: AuthProvider, public loading: LoadingController, public formBuilder: FormBuilder, public nav: NavController, public navParams: NavParams) {;    
+  constructor(public auth: AuthProvider, public loading: LoadingController, public formBuilder: FormBuilder, 
+    public nav: NavController, public navParams: NavParams) {;    
     this.loginForm = formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.compose([Validators.minLength(6), Validators.maxLength(20), Validators.required])]
@@ -42,11 +43,11 @@ export class LoginPage {
     this.auth.facebookLogin().then(response => {
      
         loading.dismiss();
-        alert('LOGIN REALIZADO');
+        this.nav.setRoot('HomePage');
      
     }, error => {
       loading.dismiss();
-      alert(JSON.stringify(error))
+      
     });
   }
 

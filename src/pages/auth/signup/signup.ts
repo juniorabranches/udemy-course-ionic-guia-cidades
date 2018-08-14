@@ -55,6 +55,7 @@ export class SignupPage {
           buttons: ['OK']
         });
         alert.present();
+        this.navCtrl.setRoot('HomePage');
       }, (error) =>{
         loading.dismiss();
         const alert = this.alert.create({

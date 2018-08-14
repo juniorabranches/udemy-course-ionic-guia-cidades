@@ -54,7 +54,6 @@ export class AuthProvider {
         return this.fb.login(['email', 'public_profile']).then(res => {
           const facebookCredential = firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken);
           return firebase.auth().signInWithCredential(facebookCredential).then(data => {
-            alert(JSON.stringify(data));
               this.socialLoginSuccess(data, this.PROVIDER_FACEBOOK)
           });
         })
@@ -93,7 +92,6 @@ export class AuthProvider {
   }  
 
   getUserByUid(uid) {
-    alert(uid)
     return new Promise((resolve, reject) => {
         var userRef = this.userProfile.child(uid);
         userRef.once("value", function (snap) {
