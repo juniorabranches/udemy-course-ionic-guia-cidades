@@ -44,7 +44,7 @@ export class MyApp {
       this.af.authState.take(1).subscribe(data => {
         if(data && data.email && data.uid){
           loading.dismiss();
-          resolve('HomePage')
+          resolve('TabsPage')
         } else {
           loading.dismiss();
           resolve('LoginPage')
