@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { IonicPage, NavController, Searchbar } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -7,6 +7,9 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  @ViewChild('searchbar', {read: ElementRef}) searchbarRef: ElementRef;
+  @ViewChild('searchbar') searchbarElement: Searchbar;
+  search: boolean = false;
   cidades: Array<{cidade: string, estado: string, imagem: string}>
   constructor(public navCtrl: NavController) {
     this.cidades = [
@@ -31,6 +34,10 @@ export class HomePage {
         imagem: 'assets/imgs/cidades/goias.jpg'
       },                
     ]
+  }
+
+  toggleSearch(){
+    this.search = this.search ? false : true;
   }
 
 }

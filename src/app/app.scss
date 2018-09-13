@@ -50,3 +50,9 @@ ion-item{
 ::-webkit-input-placeholder {
     color: #fff !important;
 }    
+
+ion-content {
+    background: linear-gradient(316deg, transparentize(#405d94, .15), #003300);
+    background-size: 1800% 1800%;
+    animation: gradient-effect 15s linear infinite;
+  }
