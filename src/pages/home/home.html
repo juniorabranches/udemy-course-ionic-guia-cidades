@@ -1,16 +1,16 @@
-<ion-header>
-  <ion-navbar>
+<ion-header no-border>
+  <ion-navbar transparent>
     <ion-title>
       Guia de Cidades
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="card-background-page">
   <ion-card *ngFor="let cidade of cidades">
     <img [src]="cidade.imagem" alt="">
-    <div>{{cidade.cidade}}</div>
-    <div>{{cidade.estado}}</div>
+    <div class="card-title">{{cidade.cidade}}</div>
+    <div class="card-subtitle">{{cidade.estado}}</div>
   </ion-card>
   
 </ion-content>
